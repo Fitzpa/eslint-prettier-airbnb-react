@@ -137,6 +137,9 @@ else
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "no-unused-vars": "warn",
+    "prettier/prettier": ["error", {
+           "endOfLine":"auto"
+         }],
     "max-len": [
       "warn",
       {
