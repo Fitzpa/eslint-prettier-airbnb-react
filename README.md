@@ -9,7 +9,7 @@
 2. Run this command inside your app's root directory. Note: this command executes the `eslint-prettier-config.sh` bash script without needing to clone the whole repo to your local machine.
 
    ```bash
-   exec 3<&1;bash <&3 <(curl https://raw.githubusercontent.com/paulolramos/eslint-prettier-airbnb-react/master/eslint-prettier-config.sh 2> /dev/null)
+   exec 3<&1;bash <&3 <(curl https://raw.githubusercontent.com/Fitzpa/eslint-prettier-airbnb-react/master/eslint-prettier-config.sh 2> /dev/null)
    ```
 
 3. Make selections for your preference of package manager (npm or yarn), file format (.js or .json), max-line size, and trailing commas (none, es5, all).
@@ -45,6 +45,14 @@
    - Runs Prettier as an ESLint rule and reports differences as individual ESLint issues.
 2. [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
    - Turns off all rules that are unnecessary or might conflict with Prettier.
+   
+### ESlint, Node Integration
+
+1. [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node)
+   - Adds additional ESLint rules for Node.js.
+2. [eslint-config-node](https://github.com/kunalgolani/eslint-config/tree/master/packages/node)
+   - Pluggable ESLint config for Node.js that you can import, extend and override.
+   
 
 # Created Configuration Files
 
@@ -71,6 +79,7 @@ Once files are created, you may edit to your liking.
   "rules": {
     "jsx-a11y/href-no-hash": ["off"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "no-unused-vars": "warn",
     "max-len": [
       "warn",
       {
@@ -103,4 +112,6 @@ Once files are created, you may edit to your liking.
 
 ---
 
-This script was inspired by Jeffrey Zhen's [tutorial](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a).
+This script was inspired by Jeffrey Zhen's [tutorial](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a)
+as well as originally forked from Paulolramos [here](https://github.com/paulolramos/eslint-prettier-airbnb-react)
+I found out about this through KarlHadwen's YouTube video [tutorial](https://www.youtube.com/watch?v=qibrJYImqLU).
